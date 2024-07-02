@@ -30,3 +30,6 @@ public class move_zero_to_end {
         printArray(editedArray);
     }
 }
+
+
+// output : 1 4 12 3 4 0 0 0 0 0 0
