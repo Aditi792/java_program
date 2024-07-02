@@ -1,4 +1,4 @@
-package java_DSA;
+package java_DSA.array;
 
     
 public class sorted_array {    
