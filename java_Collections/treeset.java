@@ -1,4 +1,4 @@
-package java_Collections.wiproPBL;
+package java_Collections;
 
 import java.util.TreeSet;
 import java.util.ArrayList;
