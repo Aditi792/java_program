@@ -22,6 +22,7 @@ class hashSet{
     }
 
     public void printCountry(){
+        System.out.println("\nIn et element print in random order as this is unoredred data structure.\n");
         Iterator <String> it = H1.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
@@ -49,3 +50,16 @@ class set{
 
     }
 }
+
+/*
+ * Searching for 'India': India
+Searching for 'USA': USA
+Searching for 'Japan': null
+
+In et element print in random order as this is unoredred data structure.
+
+USA
+Uk
+England
+India
+ */
