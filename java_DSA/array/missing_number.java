@@ -27,9 +27,9 @@ public class missing_number {
     }
 */
 
-// we find it with o(n) time complexity . but using sum of n natural number formula (n(n+1)/2) 
+// we find it with o(n) time complexity and o(1) space complexity . but using sum of n natural number formula (n(n+1)/2) and XOR .
 
-    public static int missNum(int[] arr) {
+    /* public static int missNum(int[] arr) {
         int len = arr.length;
         int n = len + 1;
         int sumOf_N_Numbers = (n * (n + 1))/2;
@@ -37,6 +37,16 @@ public class missing_number {
             sumOf_N_Numbers -= arr[i];
         }
         return sumOf_N_Numbers;
+    } */
+
+    public static int missNum(int[] arr) {
+        int XOR1 = 0 ,XOR2 =0;
+        for(int i = 0 ; i < arr.length ; i++){
+            XOR2 = XOR2 ^ arr[i];
+            XOR1 = XOR1 ^ (i++);
+        }
+        XOR1 = XOR1 ^ arr.length;
+        return XOR2 ^ XOR1 ;
     }
 
 
@@ -44,4 +54,7 @@ public class missing_number {
         int[] arr = {1,2,4,5,6,7};
         System.out.print("Missing Number is : " + missNum(arr));
     }
+
 }
+
+// output 3 as 3 is missing in the array 
