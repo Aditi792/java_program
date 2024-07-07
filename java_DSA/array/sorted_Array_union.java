@@ -2,7 +2,7 @@ package java_DSA.array;
 
 import java.util.ArrayList;
 
-public class orted_Array_union {
+public class sorted_Array_union {
 
     public static ArrayList<Integer> union(int[] arr1,int[] arr2){
         int n = arr1.length;

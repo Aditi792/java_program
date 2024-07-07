@@ -1,3 +1,5 @@
+package java_Collections;
+
 class dgenerics < T, U>{
     T obj1; // references
     U obj2;

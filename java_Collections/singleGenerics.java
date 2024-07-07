@@ -1,4 +1,4 @@
-
+package java_Collections;
 class Generics<T> {
     T obj1;
     Generics(T obj1){

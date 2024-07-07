@@ -1,3 +1,4 @@
+package java_Collections;
 
 class gendisplay{
     public <T> void genDisplay( T obj1){  //generic methood without generic class
