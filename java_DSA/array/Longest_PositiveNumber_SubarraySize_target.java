@@ -8,6 +8,9 @@ arr[] = {10, 5, 2, 7, 1, 9}, k = 15
 Output : 4
 Explanation:
 The sub-array is {5, 2, 7, 1}.
+
+
+This is useful if the array contains only positive numbers.
  */
 public class Longest_PositiveNumber_SubarraySize_target {
         public static int lenOfLongSubarr (int A[], int K) {
