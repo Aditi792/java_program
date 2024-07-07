@@ -39,7 +39,7 @@ public class vector {
             System.out.println();
         }
         
-        Iterator <Employese> it = veclist.iterator();
+        Iterator <Employese> it = veclist.iterator();  // here iterate an object , thst why we store it in an object and then print employee details.
         while(it.hasNext()){
             Employese emp = it.next();
             emp.getEmployeeDetails();
