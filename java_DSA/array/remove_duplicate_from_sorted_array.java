@@ -5,7 +5,7 @@ public class remove_duplicate_from_sorted_array {
 
     public static void printArray(int[] arr){         // for ptinting array method 
         for(int i = 0 ; i < arr.length ; i++){
-            System.out.println(arr[i] + " ");
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
@@ -14,29 +14,26 @@ public class remove_duplicate_from_sorted_array {
 
     public static int[] removeDuplicate(int[] arr) {        // remove duplicate from original array and print unique number sorted array same order as original array
         int i = 0 ;
-        int n  = arr.length;
-        int[] uniqueArr = new int[n];
-        uniqueArr[0] = arr[0];
-        for(int j=0 ; j <arr.length ; j++){
-            if (arr[j] != uniqueArr[i]){
-                uniqueArr[i+1] = arr[j];
-                i++;
-            }
-        }
-        return uniqueArr;
-    }
-
-    // count unique element 
-
-    public static int countUniqueElement(int[] arr) {        // count the unique element from the sorted array 
-        int i = 0 ;
         for(int j=0 ; j <arr.length ; j++){
             if (arr[j] != arr[i]){
                 arr[i+1] = arr[j];
                 i++;
             }
         }
-        return i+1;
+        return arr;
+    }
+
+    // count unique element 
+
+    public static int countUniqueElement(int[] arr) {        // count the unique element from the sorted array 
+        int i = 1 ;
+        for(int j=1 ; j <arr.length ; j++){
+            if (arr[i] != arr[i-1]){
+                arr[i] = arr[j];
+                i++;
+            }
+        }
+        return i;
     }
 
 
