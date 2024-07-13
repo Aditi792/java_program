@@ -1,6 +1,6 @@
 package java_DSA.array;
 
-import java.util.HashMap;
+//import java.util.HashMap;
 
 public class two_sum {
 
