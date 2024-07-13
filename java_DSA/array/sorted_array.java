@@ -1,6 +1,7 @@
 package java_DSA.array;
 
-    
+import java.util.Arrays;
+
 public class sorted_array {    
     public static void main(String[] args) {        
         int [] arr = new int [] {5, 2, 8, 7, 1};     
@@ -19,7 +20,8 @@ public class sorted_array {
                    arr[j] = temp;    
                }     
             }     
-        }    
+        }   
+        
           
         System.out.println();    
         
