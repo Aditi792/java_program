@@ -60,8 +60,11 @@ public class _3sum {
                     k--;
 
                     //remove duplicates:
-                    if( j < k && arr[j]==arr[j-1]) j++;
-                    if(j<k && arr[k] == arr[k+1] ) k--;
+
+                    //The inner while loops for skipping duplicates after finding a valid triplet should be nested inside the outer while loop to ensure that all consecutive duplicates are skipped correctly.
+                    
+                    while( j < k && arr[j]==arr[j-1]) j++; 
+                    while(j<k && arr[k] == arr[k+1] ) k--;
                 }
             }
         }
