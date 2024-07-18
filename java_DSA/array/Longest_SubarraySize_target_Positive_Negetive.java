@@ -36,7 +36,7 @@ public class Longest_SubarraySize_target_Positive_Negetive {
             
             if (subArr.containsKey(rem)){
                 int len = subArr.get(rem);
-                maxlen = Math.max(maxlen, len) ;
+                maxlen = Math.max(maxlen, i-len) ;
             }
 
             if( !subArr.containsKey(sum)){
