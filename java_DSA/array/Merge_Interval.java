@@ -34,6 +34,10 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
         // Iterating through intervals array
         for (int i = 0; i < intervals.length; i++) {
             int[] currentInterval = intervals[i]; // Assign current interval to currentInterval variable
+
+            //currentInterval represents one interval from the intervals array.It allows you to access and manipulate the start (currentInterval[0]) and end (currentInterval[1]) of the interval as needed for any processing logic.
+
+            
             System.out.println("Current Interval: [" + currentInterval[0] + ", " + currentInterval[1] + "]" // Print current interval
 
 
