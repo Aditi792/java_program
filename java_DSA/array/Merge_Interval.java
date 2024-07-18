@@ -37,7 +37,7 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
             //currentInterval represents one interval from the intervals array.It allows you to access and manipulate the start (currentInterval[0]) and end (currentInterval[1]) of the interval as needed for any processing logic.
 
-            
+
             System.out.println("Current Interval: [" + currentInterval[0] + ", " + currentInterval[1] + "]" // Print current interval
 
 
@@ -83,7 +83,7 @@ public class Merge_Interval {
                 merged.add(currentInterval);
             }
         }
-        return merged.toArray(new int[merged.size()][]);
+        return merged.toArray(new int[merged.size()][]);   //Convert List<int[]> to int[][]
     }
     
 
