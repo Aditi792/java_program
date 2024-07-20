@@ -58,6 +58,32 @@ public class Isomorphic_string {
        return true;     
     }
 
+    // using array rather than than for reduce tha space but it takes also some spcae. //this may be the optimal approach.
+
+    public boolean isIsomorphic(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        int[] mapST = new int[256];
+        int[] mapTS = new int[256];//The size 256 is chosen to cover all possible ASCII characters.
+
+        for (int i = 0; i < s.length(); i++) {
+            char charS = s.charAt(i);
+            char charT = t.charAt(i);
+
+            if (mapST[charS] == 0 && mapTS[charT] == 0) {  //If both mapST[charS] and mapTS[charT] are zero, it means this is the first time we encounter this mapping. Set the mapping.
+                mapST[charS] = charT;
+                mapTS[charT] = charS;
+
+            } else if (mapST[charS] != charT || mapTS[charT] != charS) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
 
     public static void main(String[] args) {
