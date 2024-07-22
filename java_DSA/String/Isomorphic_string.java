@@ -60,7 +60,7 @@ public class Isomorphic_string {
        return true;     
     }
 
-    // using array rather than than for reduce tha space but it takes also some space but the space is constant.so , this is the optimal approach. SC- O(1)  TC - O(n)
+    // using array rather than map ,for reduce the space but it takes also some space but the space is constant.so , this is the optimal approach. SC- O(1)  TC - O(n)
 
     public boolean isIsomorphic(String s, String t) {
         if (s.length() != t.length()) {
