@@ -1,8 +1,10 @@
 package java_DSA.Linked_list;
 
 public class detect_loop {
-    
+
     static Node head;
+
+    //detect loop follow floyd's cycle detection algorithm
 
     //detect Loop in a linked list
     public static boolean detectLoop(){
