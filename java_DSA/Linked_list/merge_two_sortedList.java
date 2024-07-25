@@ -1,5 +1,8 @@
 package java_DSA.Linked_list;
 
+
+//Tc - O(N) SC - O(1)
+
 public class merge_two_sortedList {
     
     static Node head;
