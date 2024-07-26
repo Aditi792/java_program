@@ -15,7 +15,7 @@ class Node{
 
 class DoubleLinkedList{
     Node head;
-
+    Node tail;
 
     //checking list empty or not
     public boolean isEmpty(){
@@ -48,6 +48,18 @@ class DoubleLinkedList{
         }  
     }
 
+    //insert data in last using head and tail pointer
+    // public void constructDLL(int data) {
+    //        if(head == null){
+    //            head = new Node(data);
+    //            tail = head;
+    //        }else{
+    //            Node node = new Node(data);
+    //            tail.next = node;
+    //            node.prev = tail;
+    //            tail = node;
+    //        }
+    // }
 
 
     //insert at after value
