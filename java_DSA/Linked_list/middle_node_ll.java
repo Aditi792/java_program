@@ -26,22 +26,24 @@ public class middle_node_ll {
 
     static Node head;
 
+    //we do this in two steps . first TC is - O(n) and second is - O(n/2) , so overall TC - (n + n/2) .Sc- O(1).....so to optimized this we use tortoise method.
     public static int countLength(Node list1){
         Node itr = list1;
-        int count =1;
-        while(itr.next != null){
+        int count =0;
+        while(itr != null){
             count++;
             itr = itr.next;
         }
         return count;
     }
  
-    // both the cases for odd and even no. off list ...the return list always return from the middle point + 1node.
+    // both the cases for odd and even no. off list ...the return list always return from the middle point + 1 node.
     public static Node middleNode(Node list1){
         Node current = list1;
         int count = 1;
+        int mid = (countLength(list1) /2) +1;
         while(current != null){
-            if(count == ((countLength(list1) /2) +1)){       
+            if(count == mid){       
                 return current;
             }
             count++;
@@ -49,6 +51,24 @@ public class middle_node_ll {
         }
         return current;
     }
+
+
+
+    //Optimal solution 
+    //Tortoise method & hare solution
+    // for this we use slow and fast pointer approach.
+    //SC - O(1)  TC - O(n/2)=O(n)
+
+    public static Node middleNodeLL(Node head){
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
 
     public static void main(String[] args) {
         singleLinkedlist sll1 = new singleLinkedlist();
@@ -66,13 +86,14 @@ public class middle_node_ll {
         sll2.insertAtLast(7);
         sll2.insertAtLast(9);
 
-        sll1.printLinkedList();
+        sll1.printLinkedList();  
 
         singleLinkedlist middSll = new singleLinkedlist();
         int count = countLength(sll1.head);
         System.out.println(count);
         middSll.head = middleNode(sll1.head);
-        middSll.printLinkedList();
+        middSll.printLinkedList(); 
+
 
         System.out.println();
         sll2.printLinkedList();
@@ -82,6 +103,12 @@ public class middle_node_ll {
         System.out.println(count1);
         middSll1.head = middleNode(sll2.head);
         middSll1.printLinkedList();
+
+        System.out.println();
+        
+        singleLinkedlist middSll2 = new singleLinkedlist();
+        middSll2.head = middleNodeLL(sll1.head);
+        middSll2.printLinkedList();  //3-->5-->6-->null
     }
 }
 
